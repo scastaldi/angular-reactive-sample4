@@ -1,0 +1,34 @@
+# dependencies
+node_modules
+dist
+output
+.npmrc
+.angular
+
+# testing
+coverage
+**/TESTS-*.xml
+
+# sonar
+?
+.scannerwork
+
+# production
+build
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+_ignore
+.vscode-upload.json
+docker-compose-tmp*.yml
+vault.*
+.nyc_output
+
+# webstorm
+.idea/
+
+# eclipse
+.project
+.settings/
