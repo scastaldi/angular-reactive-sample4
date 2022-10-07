@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -34,7 +33,6 @@ import { TicketMasterService } from './ticket-master.service';
   declarations: [
     AppComponent,
     HelloComponent,
-    NavbarComponent,
     TableOverviewExample,
   ],
   bootstrap: [AppComponent],
