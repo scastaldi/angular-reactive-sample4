@@ -20,6 +20,7 @@ import { MatCommonModule, MatNativeDateModule, MatOptionModule } from '@angular/
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialExampleModule } from './material.module';
+import { TicketMasterService } from './ticket-master.service';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -37,5 +38,6 @@ import { MaterialExampleModule } from './material.module';
     TableOverviewExample,
   ],
   bootstrap: [AppComponent],
+  providers: [TicketMasterService]
 })
 export class AppModule {}
