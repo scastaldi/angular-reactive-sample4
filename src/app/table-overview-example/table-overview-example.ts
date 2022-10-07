@@ -1,8 +1,6 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import { TicketMasterEvent } from '../ticket-master.interface';
 import { TicketMasterService } from '../ticket-master.service';
 
 @Component({
@@ -12,7 +10,6 @@ import { TicketMasterService } from '../ticket-master.service';
 })
 export class TableOverviewExample {
   displayedColumns: string[] = ['id', 'name', 'images'];
-  dataSource: MatTableDataSource<TicketMasterEvent>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -22,12 +19,12 @@ export class TableOverviewExample {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this._ticketMasterService.eventKeywordSelectedAction(filterValue);
+    this._ticketMasterService.keywordSelectedAction(filterValue);
   }
 
   public handlePage(e: any) {
-    this._ticketMasterService.eventPageSelectedAction(e.pageIndex);
-    this._ticketMasterService.eventSizeSelectedAction(e.pageSize);
+    this._ticketMasterService.pageSelectedAction(e.pageIndex);
+    this._ticketMasterService.sizeSelectedAction(e.pageSize);
   }
 }
 
